@@ -1,4 +1,4 @@
-package com.example.dynamicweb;
+package org.scoula.dynamicweb;
 
 import java.io.*;
 import javax.servlet.http.*;
