@@ -24,6 +24,9 @@ tasks.withType(JavaCompile) {
 dependencies {
     compileOnly('javax.servlet:javax.servlet-api:4.0.1')
 
+    // out 내장 객체 사용이 안되서 추가한 라이브러리
+    compileOnly 'javax.servlet.jsp:javax.servlet.jsp-api:2.3.3'
+
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
 }
