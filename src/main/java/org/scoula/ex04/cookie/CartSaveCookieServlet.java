@@ -38,4 +38,9 @@ public class CartSaveCookieServlet extends HttpServlet {
         out.print("<a href='cart_view_cookie'>장바구니 보기</a>");
         out.print("</body></html>");
     }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        doGet(req, resp);
+    }
 }

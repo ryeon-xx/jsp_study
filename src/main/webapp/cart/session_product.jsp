@@ -5,7 +5,7 @@
 </head>
 <body>
 <h1>상품 리스트</h1>
-<form action="cart_save" method="GET">
+<form action="cart_save" method="POST">
   <input type="radio" name="product" value="BMW"> BWM<br>
   <input type="radio" name="product" value="SM5"> SM5<br>
   <input type="radio" name="product" value="K7"> K7<br>

@@ -30,4 +30,9 @@ public class CartDeleteServlet extends HttpServlet {
         out.println("<a href='session_product.jsp'>상품 선택 페이지</a>");
         out.println("</body></html>");
     }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        doGet(req, resp);
+    }
 }

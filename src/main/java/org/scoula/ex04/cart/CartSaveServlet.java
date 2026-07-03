@@ -37,4 +37,9 @@ public class CartSaveServlet extends HttpServlet {
         out.println("<a href='cart_view'>장바구니 보기</a>");
         out.print("</body></html>");
     }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        doGet(req, resp);
+    }
 }

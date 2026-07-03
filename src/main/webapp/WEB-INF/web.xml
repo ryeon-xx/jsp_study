@@ -4,11 +4,11 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
 
-<!-- 서블릿 맵핑 - 두 번째 방법 -->
+    <!-- 서블릿 맵핑 - 두 번째 방법 -->
     <servlet>
-            <!-- helloServlet : 서블릿 별명 -->
+        <!-- helloServlet : 서블릿 별명 -->
         <servlet-name>helloServlet</servlet-name>
-                        <!-- 패키지를 포함한 서블릿명 -->
+        <!-- 패키지를 포함한 서블릿명 -->
         <servlet-class>org.scoula.dynamicweb.HelloServlet</servlet-class>
     </servlet>
     <servlet-mapping>
@@ -17,4 +17,14 @@
         <!-- /hello-servleet : /맵핑명 -->
         <url-pattern>/hello-servlet</url-pattern>
     </servlet-mapping>
+
+    <!-- 필터 등록 - web.xml에 등록하는 경우 -->
+<!--    <filter>-->
+<!--        <filter-name>myFilter</filter-name>-->
+<!--        <filter-class>org.scoula.filter.MyFilter</filter-class>-->
+<!--    </filter>-->
+<!--    <filter-mapping>-->
+<!--        <filter-name>myFilter</filter-name>-->
+<!--        <url-pattern>/*</url-pattern>-->
+<!--    </filter-mapping>-->
 </web-app>
