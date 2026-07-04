@@ -11,12 +11,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 @WebServlet(name = "frontControllerServlet", value = "/")
-public class FrontControllerServlet extends HttpServlet {
-    Map<String, Command> getMap;
-    Map<String, Command> postMap;
-
-    String prefix = "/WEB-INF/views/";
-    String suffix = ".jsp";
+public class FrontControllerServlet extends DispatcherServlet {
+//    Map<String, Command> getMap;
+//    Map<String, Command> postMap;
+//
+//    String prefix = "/WEB-INF/views/";
+//    String suffix = ".jsp";
 
     HomeController homeController = new HomeController();
     TodoController todoController = new TodoController();
@@ -24,10 +24,24 @@ public class FrontControllerServlet extends HttpServlet {
     @Override
     public void init() throws ServletException {
         System.out.println("init 호출 - 초기화");
-        getMap = new HashMap<>();
-        postMap = new HashMap<>();
+//        getMap = new HashMap<>();
+//        postMap = new HashMap<>();
+//
+//        getMap.put("/", homeController::getIndex);
+//
+//        getMap.put("/todo/list", todoController::getList);
+//        getMap.put("/todo/view", todoController::getView);
+//        getMap.put("/todo/create", todoController::getCreate);
+//        getMap.put("/todo/update", todoController::getUpdate);
+//
+//        postMap.put("/todo/create", todoController::postCreate);
+//        postMap.put("/todo/update", todoController::postUpdate);
+//        postMap.put("/todo/delete", todoController::postDelete);
+    }
 
-        getMap.put("/", homeController::getIndex);
+    @Override
+    protected void createMap(Map<String, Command> getMap, Map<String, Command> postMap) {
+                getMap.put("/", homeController::getIndex);
 
         getMap.put("/todo/list", todoController::getList);
         getMap.put("/todo/view", todoController::getView);
