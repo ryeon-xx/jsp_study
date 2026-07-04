@@ -9,5 +9,12 @@
 </h1>
 <br/>
 <a href="hello-servlet">Hello Servlet</a>
+
+<br>
+<hr>
+<br>
+
+<h1>FrontController</h1>
+<a href="/todo/list">TODO 목록 보기</a>
 </body>
 </html>
