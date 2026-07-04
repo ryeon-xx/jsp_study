@@ -19,6 +19,7 @@ public class FrontControllerServlet extends HttpServlet {
     String suffix = ".jsp";
 
     HomeController homeController = new HomeController();
+    TodoController todoController = new TodoController();
 
     @Override
     public void init() throws ServletException {
@@ -27,6 +28,15 @@ public class FrontControllerServlet extends HttpServlet {
         postMap = new HashMap<>();
 
         getMap.put("/", homeController::getIndex);
+
+        getMap.put("/todo/list", todoController::getList);
+        getMap.put("/todo/view", todoController::getView);
+        getMap.put("/todo/create", todoController::getCreate);
+        getMap.put("/todo/update", todoController::getUpdate);
+
+        postMap.put("/todo/create", todoController::postCreate);
+        postMap.put("/todo/update", todoController::postUpdate);
+        postMap.put("/todo/delete", todoController::postDelete);
     }
 
     private String getCommandName(HttpServletRequest req) {
