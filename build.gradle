@@ -27,6 +27,10 @@ dependencies {
     // out 내장 객체 사용이 안되서 추가한 라이브러리
     compileOnly 'javax.servlet.jsp:javax.servlet.jsp-api:2.3.3'
 
+    // lombok 라이브러리
+    compileOnly 'org.projectlombok:lombok:1.18.32'
+    annotationProcessor 'org.projectlombok:lombok:1.18.32'
+
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
 }
